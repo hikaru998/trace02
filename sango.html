@@ -45,15 +45,16 @@
             <div class="contents-container-left">
                 <div class="top-wrapper">
                     <div class="top-wrapper-left">
-                        <span class="new-article white-color"><i class="fas fa-rocket top-left-icon"></i>新着記事</span>
-                        <span class="recommended-article gradient-color"><i class="fas fa-bookmark top-left-icon"></i>おすすめ記事</span>
+                        <a class="tab-btn is-active-btn new-article" href="#item1"><i class="fas fa-rocket top-left-icon"></i>新着記事</a>
+                        <a class="tab-btn recommended-article" href="#item2"><i class="fas fa-bookmark top-left-icon"></i>おすすめ記事</a>
                     </div>
                 </div>
-                <div class="article-wrapper">
+                <!--1つ目のarticle-wrapper-->
+                <div class="article-wrapper is-active-item" id="item1">
                     <a href="#">
                         <div class="article">
                             <div class="article-img">
-                                <img src="images/article-one.jpg" alt="画像">
+                                <img src="images/article-one.jpg" alt="画像">   
                                 <p class="article-category">ニュース</p>
                                 <p class="article-info">NEW</p>
                             </div>
@@ -148,6 +149,107 @@
                         </div>
                     </a>
                 </div>
+                <!--2つ目のarticle-wrapper-->
+                <div class="article-wrapper" id="item2">
+                    <a href="#">
+                        <div class="article">
+                            <div class="article-img">
+                                <img src="images/article-one.jpg" alt="画像">   
+                                <p class="article-category">ニュース</p>
+                                <p class="article-info">NEW</p>
+                            </div>
+                            <div class="article-title">
+                                <p class="date"><i class="fas fa-clock article-icon"></i>2019.03.27 Wed</p>
+                                <p class="article-name">WordPressテーマ「SANGO」29の魅力</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="article">
+                            <div class="article-img">
+                                <img src="images/article-two.jpg" alt="画像">
+                                <p class="article-category">カスタマイズカテゴリー</p>
+                            </div>
+                            <div class="article-title">
+                                <p class="date"><i class="fas fa-clock article-icon"></i>2017.09.18 Mon</p>
+                                <p class="article-name">SANGOのショートコードでできること</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="article">
+                            <div class="article-img">
+                                <img src="images/article-four.jpg" alt="画像">
+                                <p class="article-category">見出し</p>
+                            </div>
+                            <div class="article-title">
+                                <p class="date"><i class="fas fa-clock article-icon"></i>2016.09.18 Sun</p>
+                                <p class="article-name">記事を華やかに！約40種類の見出しデザイン</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="article">
+                            <div class="article-img">
+                                <img src="images/article-three.jpg" alt="画像">
+                                <p class="article-category">デザイン</p>
+                            </div>
+                            <div class="article-title">
+                                <p class="date"><i class="fas fa-clock article-icon"></i>2017.03.16 Thu</p>
+                                <p class="article-name">関連記事のデザインを3パターン+から選べるように</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#">
+                        <div class="article">
+                            <div class="article-img">
+                                <img src="images/article-six.jpg" alt="画像">
+                                <p class="article-category">ニュース</p>
+                            </div>
+                            <div class="article-title">
+                                <p class="date"><i class="fas fa-clock article-icon"></i>2016.09.18 Sun</p>
+                                <p class="article-name">SANGOで約30種類のボックスを挿入しよう</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="article">
+                            <div class="article-img">
+                                <img src="images/article-five.jpg" alt="画像">
+                                <p class="article-category">デザイン</p>
+                            </div>
+                            <div class="article-title">
+                                <p class="date"><i class="fas fa-clock article-icon"></i>2016.09.18 Sun</p>
+                                <p class="article-name">40種類以上のボタンを用意</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="article">
+                            <div class="article-img">
+                                <img src="images/article-seven.jpg" alt="画像">
+                                <p class="article-category">リスト</p>
+                            </div>
+                            <div class="article-title">
+                                <p class="date"><i class="fas fa-clock article-icon"></i>2016.09.18 Sun</p>
+                                <p class="article-name">SANGOの箇条書き（20種類以上）と引用のデザイン</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="article">
+                            <div class="article-img">
+                                <img src="images/article-eight.png" alt="画像">
+                                <p class="article-category">ニュース</p>
+                            </div>
+                            <div class="article-title">
+                                <p class="date"><i class="fas fa-clock article-icon"></i>2016.09.18 Sun</p>
+                                <p class="article-name">ウィジェットを使いこなす：広告の設置もカンタン</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
                 <div class="page-wrapper">
                     <a class="first" href="#">1</a>
                     <a class="second" href="#">2</a>
@@ -157,7 +259,10 @@
             </div>
             <div class="side-bar-container">
                 <div class="search-wrapper">
-                    <input type="search" placeholder='検索' value="&#xf002;" class="fa fas">
+                    <input type="search" placeholder='検索'>
+                    <div class="search-icon-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
                 </div>
                 <div class="profile-wrapper">
                     <img class="profile-img" src="images/profile-01-min.png" alt="">
@@ -284,7 +389,20 @@
                     <div class="archive-wrapper-heading">
                         <p><i class="fas fa-clock archive-icon"></i>ARCHIVE</p>
                     </div>
-                    <div class="archive-wrapper-contents"></div>
+                    <div class="archive-wrapper-contents">
+                        <select name="" id="">
+                            <option value="">月を選択</option>
+                            <option value="">2019年3月</option>
+                            <option value="">2017年9月</option>
+                            <option value="">2017年3月</option>
+                            <option value="">2016年9月</option>
+                            <option value="">2013年9月</option>
+                            <option value="">2013年8月</option>
+                            <option value="">2012年9月</option>
+                            <option value="">2012年8月</option>
+                        </select>
+                        <i class="fas fa-sort-down archive-select-icon"></i>
+                    </div>
                 </div>
                 <div class="category-wrapper">
                     <div class="category-wrapper-heading">

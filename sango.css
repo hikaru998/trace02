@@ -166,9 +166,15 @@ header {
 .top-wrapper-left {
     display:flex;
     width: 100%;
+    box-shadow:0 2px 5px gray;
 }
 
-.top-wrapper-left span {
+.is-active-btn {
+    background:linear-gradient(to right,#B7B9FF,#6EB8FF);
+    color:white;
+}
+
+.top-wrapper-left a {
     display:block;
     width:50%;
     height: 51px;
@@ -176,32 +182,29 @@ header {
     text-align: center;
     padding-top: 15px;
     border-radius: 5px;
-    cursor:pointer;
+    color:#A7A7A7;
+    background-color:white;
 }
+
+
 
 .top-left-icon {
     margin-right:6px;
 }
 
-.new-article {
-    color:#A7A7A7;
-    background-color:white;
-}
-
-.recommended-article {
-    
-    background:linear-gradient(to right,#B8B9FF,#70B8FF);
-    color:white;
-}
 
 /*article*/
 
 .article-wrapper {
     margin-top: 43px;
+    display:none;
+    width: 100%;
+}
+
+.is-active-item {
     display:flex;
     flex-wrap:wrap;
     justify-content: space-between;
-    width: 100%;
 }
 
 .article-wrapper a {
@@ -215,6 +218,14 @@ header {
     background-color: #fff;
     flex:none;
     margin-bottom: 24px;
+    box-shadow:0 2px 5px gray;
+    transition:all 0.4s;
+}
+
+.article:hover {
+    position:relative;
+    top:-8px;
+    box-shadow:0 2px 15px gray;
 }
 
 .article-img {
@@ -340,8 +351,14 @@ header {
 }
 
 .side-bar-container input {
-    width: 100%;
+    width: 85%;
     height: 47px;
+    margin-right: 0;
+}
+
+.search-icon {
+    margin-left: 0;
+    border:1px solid red;
 }
 
 .profile-wrapper {
@@ -392,6 +409,11 @@ header {
     text-align:center;
     vertical-align: middle;
     margin: -15px 3px 15px 3px;
+    transition:all 0.4s;
+}
+
+.profile-share-wrapper a:hover {
+    opacity:0.7;
 }
 
 .profile-share-icon {
@@ -553,6 +575,15 @@ header {
     display:block;
     width: 90%;
     margin:auto;
+    transition:all 0.8s ease;
+}
+
+.popular-wrapper-contents a:hover > .popular-title {
+    opacity:0.8;
+}
+
+.popular-wrapper-contents a:hover > .popular-content img {
+    transform:scale(1.1);
 }
 
 .popular-rank {
@@ -668,6 +699,27 @@ header {
 
 .archive-wrapper-contents {
     height: 46px;
+    position:relative;
+}
+
+.archive-select-icon {
+    position:absolute;
+    top:3px;
+    right:11px;
+    font-size:28px;
+    color:#5c6b80;
+}
+
+.archive-wrapper-contents select {
+    height:100%;
+    width: 100%;
+    -webkit-appearance: none;
+    
+}
+
+.archive-wrapper-contents option {
+    font-size:17px;
+    color:#5c6b80;
 }
 
 .category-wrapper {
